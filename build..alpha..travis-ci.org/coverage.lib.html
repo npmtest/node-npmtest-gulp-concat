@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-concat/gulp-concat/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-concat/node_modules/gulp-concat/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -190,9 +192,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-gulp-concat">npmtest-gulp-concat (v0.0.3)</a>
+        <a href="https://github.com/npmtest/node-npmtest-gulp-concat">npmtest-gulp-concat (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-concat/gulp-concat/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-concat/node_modules/gulp-concat/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.46% <small>(7 / 52)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-concat/gulp-concat/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-concat/node_modules/gulp-concat/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -425,105 +427,104 @@ var Concat = require('concat-with-sourcemaps');
 &nbsp;
 // file can be a vinyl file object or a string
 // when a string it will construct a new one
-module.exports = <span class="fstat-no" title="function not covered">function(file, opt) {</span>
-<span class="cstat-no" title="statement not covered">  if (!file) {</span>
-<span class="cstat-no" title="statement not covered">    throw new Error('gulp-concat: Missing file option');</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(file, opt) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!file) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error('gulp-concat: Missing file option');</span>
   }
-<span class="cstat-no" title="statement not covered">  opt = opt || {};</span>
+<span class="cstat-no" title="statement not covered" >  opt = opt || {};</span>
 &nbsp;
   // to preserve existing |undefined| behaviour and to introduce |newLine: ""| for binaries
-<span class="cstat-no" title="statement not covered">  if (typeof opt.newLine !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    opt.newLine = '\n';</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof opt.newLine !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    opt.newLine = '\n';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var isUsingSourceMaps = false;</span>
-<span class="cstat-no" title="statement not covered">  var latestFile;</span>
-<span class="cstat-no" title="statement not covered">  var latestMod;</span>
-<span class="cstat-no" title="statement not covered">  var fileName;</span>
-<span class="cstat-no" title="statement not covered">  var concat;</span>
+<span class="cstat-no" title="statement not covered" >  var isUsingSourceMaps = false;</span>
+<span class="cstat-no" title="statement not covered" >  var latestFile;</span>
+<span class="cstat-no" title="statement not covered" >  var latestMod;</span>
+<span class="cstat-no" title="statement not covered" >  var fileName;</span>
+<span class="cstat-no" title="statement not covered" >  var concat;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof file === 'string') {</span>
-<span class="cstat-no" title="statement not covered">    fileName = file;</span>
-  } else <span class="cstat-no" title="statement not covered">if (typeof file.path === 'string') {</span>
-<span class="cstat-no" title="statement not covered">    fileName = path.basename(file.path);</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof file === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    fileName = file;</span>
+  } else <span class="cstat-no" title="statement not covered" >if (typeof file.path === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    fileName = path.basename(file.path);</span>
   } else {
-<span class="cstat-no" title="statement not covered">    throw new Error('gulp-concat: Missing path in file options');</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error('gulp-concat: Missing path in file options');</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function bufferContents(file, enc, cb) {</span>
+<span class="fstat-no" title="function not covered" >  function bufferContents(file, enc, cb) {</span>
     // ignore empty files
-<span class="cstat-no" title="statement not covered">    if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">      cb();</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >      cb();</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
     // we don't do streams (yet)
-<span class="cstat-no" title="statement not covered">    if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered">      this.emit('error', new Error('gulp-concat: Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered">      cb();</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered" >      this.emit('error', new Error('gulp-concat: Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered" >      cb();</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
     // enable sourcemap support for concat
     // if a sourcemap initialized file comes in
-<span class="cstat-no" title="statement not covered">    if (file.sourceMap &amp;&amp; isUsingSourceMaps === false) {</span>
-<span class="cstat-no" title="statement not covered">      isUsingSourceMaps = true;</span>
+<span class="cstat-no" title="statement not covered" >    if (file.sourceMap &amp;&amp; isUsingSourceMaps === false) {</span>
+<span class="cstat-no" title="statement not covered" >      isUsingSourceMaps = true;</span>
     }
 &nbsp;
     // set latest file if not already set,
     // or if the current file was modified more recently.
-<span class="cstat-no" title="statement not covered">    if (!latestMod || file.stat &amp;&amp; file.stat.mtime &gt; latestMod) {</span>
-<span class="cstat-no" title="statement not covered">      latestFile = file;</span>
-<span class="cstat-no" title="statement not covered">      latestMod = file.stat &amp;&amp; file.stat.mtime;</span>
+<span class="cstat-no" title="statement not covered" >    if (!latestMod || file.stat &amp;&amp; file.stat.mtime &gt; latestMod) {</span>
+<span class="cstat-no" title="statement not covered" >      latestFile = file;</span>
+<span class="cstat-no" title="statement not covered" >      latestMod = file.stat &amp;&amp; file.stat.mtime;</span>
     }
 &nbsp;
     // construct concat instance
-<span class="cstat-no" title="statement not covered">    if (!concat) {</span>
-<span class="cstat-no" title="statement not covered">      concat = new Concat(isUsingSourceMaps, fileName, opt.newLine);</span>
+<span class="cstat-no" title="statement not covered" >    if (!concat) {</span>
+<span class="cstat-no" title="statement not covered" >      concat = new Concat(isUsingSourceMaps, fileName, opt.newLine);</span>
     }
 &nbsp;
     // add file to concat instance
-<span class="cstat-no" title="statement not covered">    concat.add(file.relative, file.contents, file.sourceMap);</span>
-<span class="cstat-no" title="statement not covered">    cb();</span>
+<span class="cstat-no" title="statement not covered" >    concat.add(file.relative, file.contents, file.sourceMap);</span>
+<span class="cstat-no" title="statement not covered" >    cb();</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function endStream(cb) {</span>
+<span class="fstat-no" title="function not covered" >  function endStream(cb) {</span>
     // no files passed in, no file goes out
-<span class="cstat-no" title="statement not covered">    if (!latestFile || !concat) {</span>
-<span class="cstat-no" title="statement not covered">      cb();</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (!latestFile || !concat) {</span>
+<span class="cstat-no" title="statement not covered" >      cb();</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var joinedFile;</span>
+<span class="cstat-no" title="statement not covered" >    var joinedFile;</span>
 &nbsp;
     // if file opt was a file path
     // clone everything from the latest file
-<span class="cstat-no" title="statement not covered">    if (typeof file === 'string') {</span>
-<span class="cstat-no" title="statement not covered">      joinedFile = latestFile.clone({contents: false});</span>
-<span class="cstat-no" title="statement not covered">      joinedFile.path = path.join(latestFile.base, file);</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof file === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >      joinedFile = latestFile.clone({contents: false});</span>
+<span class="cstat-no" title="statement not covered" >      joinedFile.path = path.join(latestFile.base, file);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      joinedFile = new File(file);</span>
+<span class="cstat-no" title="statement not covered" >      joinedFile = new File(file);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    joinedFile.contents = concat.content;</span>
+<span class="cstat-no" title="statement not covered" >    joinedFile.contents = concat.content;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (concat.sourceMapping) {</span>
-<span class="cstat-no" title="statement not covered">      joinedFile.sourceMap = JSON.parse(concat.sourceMap);</span>
+<span class="cstat-no" title="statement not covered" >    if (concat.sourceMapping) {</span>
+<span class="cstat-no" title="statement not covered" >      joinedFile.sourceMap = JSON.parse(concat.sourceMap);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.push(joinedFile);</span>
-<span class="cstat-no" title="statement not covered">    cb();</span>
+<span class="cstat-no" title="statement not covered" >    this.push(joinedFile);</span>
+<span class="cstat-no" title="statement not covered" >    cb();</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return through.obj(bufferContents, endStream);</span>
+<span class="cstat-no" title="statement not covered" >  return through.obj(bufferContents, endStream);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:25:32 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 16:00:24 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
