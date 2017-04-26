@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### test coverage for  [gulp-concat (v2.6.1)](https://github.com/contra/gulp-concat#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat)",
+    "description": "#### basic test coverage for  [gulp-concat (v2.6.1)](https://github.com/contra/gulp-concat#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "gulp-concat": "*",
@@ -36,5 +36,5 @@
         "start": "PORT=${PORT:-8080} utility2 start test.js",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.4"
+    "version": "2017.4.26"
 }

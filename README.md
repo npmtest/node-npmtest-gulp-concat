@@ -1,6 +1,6 @@
 # npmtest-gulp-concat
 
-#### test coverage for  [gulp-concat (v2.6.1)](https://github.com/contra/gulp-concat#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat)
+#### basic test coverage for  [gulp-concat (v2.6.1)](https://github.com/contra/gulp-concat#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat)
 
 #### Concatenates files
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-concat/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-concat/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-concat/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-concat/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-concat/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-concat/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-concat/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-concat/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-concat/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-concat/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-concat/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-concat/build/coverage.html/index.html)
 
@@ -93,7 +93,8 @@
         "coverage": "istanbul cover _mocha",
         "test": "mocha"
     },
-    "version": "2.6.1"
+    "version": "2.6.1",
+    "bin": {}
 }
 ```
 
